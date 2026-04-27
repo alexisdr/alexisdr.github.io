@@ -1,52 +1,213 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapa de Calima en Canarias</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TFM — Predicción de Tráfico por Evento · Barcelona</title>
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      margin: 0;
-      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f4f6f9;
+      color: #1a1a2e;
+      min-height: 100vh;
     }
-    .container {
-      max-width: 960px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-    h1 {
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      color: #fff;
+      padding: 3rem 2rem 2.5rem;
       text-align: center;
-      color: #444;
     }
-    p {
-      text-align: center;
-      color: #666;
+    header h1 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      line-height: 1.3;
     }
-    .image-container {
+    header p.subtitle {
+      margin-top: 0.6rem;
+      font-size: 0.95rem;
+      opacity: 0.75;
+    }
+    header p.meta {
+      margin-top: 1.4rem;
+      font-size: 0.82rem;
+      opacity: 0.55;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #6b7280;
+      margin-bottom: 1rem;
+    }
+
+    .notebook-list {
       display: flex;
-      justify-content: center;
-      margin-top: 2rem;
+      flex-direction: column;
+      gap: 0.75rem;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+
+    .notebook-card {
+      display: flex;
+      align-items: stretch;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      transition: box-shadow 0.18s, transform 0.18s;
+    }
+    .notebook-card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.13);
+      transform: translateY(-2px);
+    }
+
+    .card-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 64px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .card-body {
+      padding: 1rem 1.2rem;
+      flex: 1;
+    }
+    .card-body h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .card-body p {
+      margin-top: 0.3rem;
+      font-size: 0.83rem;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    .card-arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 1.1rem;
+      color: #d1d5db;
+      font-size: 1.2rem;
+      transition: color 0.18s;
+    }
+    .notebook-card:hover .card-arrow { color: #6b7280; }
+
+    /* Color palette per notebook */
+    .nb-01 .card-number { background: #2563eb; }
+    .nb-02 .card-number { background: #7c3aed; }
+    .nb-03 .card-number { background: #0891b2; }
+    .nb-04 .card-number { background: #059669; }
+    .nb-05 .card-number { background: #d97706; }
+    .nb-06 .card-number { background: #dc2626; }
+
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #9ca3af;
+      padding-bottom: 2rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Concentración de PM2.5 en Canarias</h1>
-    <p>Este mapa muestra la distribución interpolada de partículas PM2.5, un indicador clave de la calima, en varias localidades de Canarias.</p>
-    <div class="image-container">
-      <img src="calima_canarias_pm25.png" alt="Mapa de Calima en Canarias">
-    </div>
+
+<header>
+  <h1>Predicción Espacio-Temporal del Tráfico Viario<br>por Eventos Urbanos en Barcelona</h1>
+  <p class="subtitle">Trabajo Final de Máster · Universitat Oberta de Catalunya</p>
+  <p class="meta">Alexis D.R. &nbsp;·&nbsp; 2024–2026 &nbsp;·&nbsp; Ciencia de Datos</p>
+</header>
+
+<main>
+  <p class="section-label">Cuadernos del proyecto</p>
+
+  <div class="notebook-list">
+
+    <a class="notebook-card nb-01" href="01_EDA.html">
+      <div class="card-number">01</div>
+      <div class="card-body">
+        <h2>Análisis Exploratorio de Datos (EDA)</h2>
+        <p>Exploración de la red viaria de Barcelona, disponibilidad de sensores de tráfico,
+           patrones horarios y semanales, meteorología, eventos culturales y accidentalidad.</p>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a class="notebook-card nb-02" href="02_dataset_integration.html">
+      <div class="card-number">02</div>
+      <div class="card-body">
+        <h2>Integración del Dataset</h2>
+        <p>Unificación de las fuentes de datos: sensores de tráfico (ITINERARIS), agenda de eventos,
+           datos meteorológicos AEMET y geolocalización de tramos viarios.</p>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a class="notebook-card nb-03" href="03_feature_engineering.html">
+      <div class="card-number">03</div>
+      <div class="card-body">
+        <h2>Feature Engineering</h2>
+        <p>Construcción de variables temporales (lags, medias móviles, codificación cíclica),
+           interacciones evento × hora y variables de calendario.</p>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a class="notebook-card nb-04" href="04_modeling.html">
+      <div class="card-number">04</div>
+      <div class="card-body">
+        <h2>Modelado Base</h2>
+        <p>Entrenamiento de un modelo LightGBM con el dataset integrado. Evaluación global
+           (MAE, RMSE, R²) e importancia de features con SHAP.</p>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a class="notebook-card nb-05" href="05_mejoras_meteo_geo.html">
+      <div class="card-number">05</div>
+      <div class="card-body">
+        <h2>Mejoras: Meteorología y Geografía</h2>
+        <p>Incorporación de datos horarios AEMET por estación, features de distancia geográfica
+           a puntos de interés y análisis del impacto sobre el modelo.</p>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a class="notebook-card nb-06" href="06_optimizacion_eventos.html">
+      <div class="card-number">06</div>
+      <div class="card-body">
+        <h2>Optimización: Features Dinámicas de Eventos</h2>
+        <p>Features de proximidad horaria al Camp Nou y Estadio Olímpic (partidos FCB)
+           y al Palau Sant Jordi (conciertos). Comparativa de tres modelos.</p>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
   </div>
+</main>
+
+<footer>
+  Generado con Jupyter nbconvert · <span id="fecha"></span>
+  <script>document.getElementById('fecha').textContent = new Date().toLocaleDateString('es-ES', {year:'numeric',month:'long',day:'numeric'});</script>
+</footer>
+
 </body>
 </html>
