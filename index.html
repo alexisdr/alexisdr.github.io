@@ -118,7 +118,6 @@
     .nb-03 .card-number { background: #0891b2; }
     .nb-04 .card-number { background: #059669; }
     .nb-05 .card-number { background: #d97706; }
-    .nb-06 .card-number { background: #dc2626; }
 
     footer {
       text-align: center;
@@ -145,8 +144,9 @@
       <div class="card-number">01</div>
       <div class="card-body">
         <h2>Análisis Exploratorio de Datos (EDA)</h2>
-        <p>Exploración de la red viaria de Barcelona, disponibilidad de sensores de tráfico,
-           patrones horarios y semanales, meteorología, eventos culturales y accidentalidad.</p>
+        <p>Exploración de los 56 tramos monitorizados de la red viaria de Barcelona.
+           Patrones horarios y semanales de la variable <code>sm</code> (s/m),
+           disponibilidad de sensores, meteorología AEMET, eventos urbanos y accidentalidad.</p>
       </div>
       <div class="card-arrow">›</div>
     </a>
@@ -155,8 +155,9 @@
       <div class="card-number">02</div>
       <div class="card-body">
         <h2>Integración del Dataset</h2>
-        <p>Unificación de las fuentes de datos: sensores de tráfico (ITINERARIS), agenda de eventos,
-           datos meteorológicos AEMET y geolocalización de tramos viarios.</p>
+        <p>Unificación de itinerarios de tráfico, eventos de la agenda municipal
+           (FCB, conciertos, festivales, ferias), datos horarios AEMET y variables
+           geográficas. Resultado: 629 713 registros horarios (jul 2021 – dic 2022).</p>
       </div>
       <div class="card-arrow">›</div>
     </a>
@@ -165,8 +166,9 @@
       <div class="card-number">03</div>
       <div class="card-body">
         <h2>Feature Engineering</h2>
-        <p>Construcción de variables temporales (lags, medias móviles, codificación cíclica),
-           interacciones evento × hora y variables de calendario.</p>
+        <p>91 features construidas: lags de <code>sm</code> (1 h–168 h), medias y
+           desviaciones móviles, codificación cíclica (hora, mes, día), interacciones
+           evento × hora × asistentes, variables AEMET y codificación de tipo de vía.</p>
       </div>
       <div class="card-arrow">›</div>
     </a>
@@ -174,29 +176,21 @@
     <a class="notebook-card nb-04" href="04_modeling.html">
       <div class="card-number">04</div>
       <div class="card-body">
-        <h2>Modelado Base</h2>
-        <p>Entrenamiento de un modelo LightGBM con el dataset integrado. Evaluación global
-           (MAE, RMSE, R²) e importancia de features con SHAP.</p>
+        <h2>Modelado — LightGBM</h2>
+        <p>Entrenamiento de LightGBM (205 árboles, 91 features, target <code>sm</code>).
+           Test H2 2022: MAE = 0.0079 s/m, R² = 0.9913, mejora del 54 % sobre baseline
+           lag 1 h. Análisis SHAP, impacto por eventos y segmentación por corredor.</p>
       </div>
       <div class="card-arrow">›</div>
     </a>
 
-    <a class="notebook-card nb-05" href="05_mejoras_meteo_geo.html">
+    <a class="notebook-card nb-05" href="05_demo_simulacion.html">
       <div class="card-number">05</div>
       <div class="card-body">
-        <h2>Mejoras: Meteorología y Geografía</h2>
-        <p>Incorporación de datos horarios AEMET por estación, features de distancia geográfica
-           a puntos de interés y análisis del impacto sobre el modelo.</p>
-      </div>
-      <div class="card-arrow">›</div>
-    </a>
-
-    <a class="notebook-card nb-06" href="06_optimizacion_eventos.html">
-      <div class="card-number">06</div>
-      <div class="card-body">
-        <h2>Optimización: Features Dinámicas de Eventos</h2>
-        <p>Features de proximidad horaria al Camp Nou y Estadio Olímpic (partidos FCB)
-           y al Palau Sant Jordi (conciertos). Comparativa de tres modelos.</p>
+        <h2>Demostración: Simulación de un Gran Evento</h2>
+        <p>Simulación de un partido FCB–Real Madrid en el Camp Nou (85 000 asistentes,
+           kick-off 21:00 h). Predicción del impacto en 51 corredores (17–23 h) con
+           ponderación de proximidad. Mapa folium interactivo verde → rojo por Δsm.</p>
       </div>
       <div class="card-arrow">›</div>
     </a>
