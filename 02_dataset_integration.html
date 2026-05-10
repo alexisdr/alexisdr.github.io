@@ -7867,7 +7867,7 @@ combinación <code>(idTram, hora)</code> para el periodo <strong>H2 2021 + 2022<
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
@@ -7927,7 +7927,7 @@ Solo se conservan registros con <code>infoDisponible = 1</code> y se sustituyen 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">TRAFICO_GLOB</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">'Itineraris'</span> <span class="o">/</span> <span class="s1">'*_ITINERARIS_ITINERARIS.csv'</span><span class="p">)</span>
@@ -7979,16 +7979,16 @@ Solo se conservan registros con <code>infoDisponible = 1</code> y se sustituyen 
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Archivos encontrados: 40
+<pre>Archivos encontrados: 18
 
-Registros cargados (infoDisponible=1): 15,674,546
-Rango temporal: 2021-01-01 00:05:52 → 2024-12-31 23:50:54
+Registros cargados (infoDisponible=1): 8,819,860
+Rango temporal: 2021-07-01 00:05:55 → 2022-12-31 23:55:54
 Trams únicos: 58
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8020,29 +8020,29 @@ Trams únicos: 58
 <tr>
 <th>0</th>
 <td>1</td>
-<td>300</td>
-<td>300</td>
+<td>302</td>
+<td>301</td>
 <td>1.0000</td>
 <td>1.0000</td>
-<td>2021-01-01 00:05:52</td>
+<td>2021-07-01 00:05:55</td>
 </tr>
 <tr>
 <th>1</th>
 <td>2</td>
-<td>255</td>
+<td>256</td>
 <td>255</td>
 <td>1.0000</td>
 <td>1.0000</td>
-<td>2021-01-01 00:05:52</td>
+<td>2021-07-01 00:05:55</td>
 </tr>
 <tr>
 <th>2</th>
 <td>3</td>
-<td>304</td>
+<td>306</td>
 <td>305</td>
 <td>1.0000</td>
 <td>1.0000</td>
-<td>2021-01-01 00:05:52</td>
+<td>2021-07-01 00:05:55</td>
 </tr>
 </tbody>
 </table>
@@ -8059,10 +8059,9 @@ Trams únicos: 58
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
-<p><code>trafico_raw</code> contiene <strong>15 674 546 registros</strong> (<code>infoDisponible = 1</code>) procedentes de
-40 archivos CSV mensuales de Itineraris (rango completo 2021-01-01 → 2024-12-31, 58 tramos únicos).
-Los valores <code>-1</code> se han sustituido por <code>NaN</code>. En el paso siguiente se trunca al periodo
-<strong>H2 2021 + 2022</strong>.</p>
+<p><code>trafico_raw</code> contiene <strong>8 819 860 registros</strong> (<code>infoDisponible = 1</code>) procedentes de
+18 archivos CSV mensuales de Itineraris (periodo H2 2021 + 2022: 2021-07-01 → 2022-12-31,
+58 tramos únicos). Los valores <code>-1</code> se han sustituido por <code>NaN</code>.</p>
 </blockquote>
 </div>
 </div>
@@ -8072,7 +8071,7 @@ Los valores <code>-1</code> se han sustituido por <code>NaN</code>. En el paso s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Truncar al periodo de interés: H2 2021 + 2022 (2021-07-01 → 2022-12-31)</span>
@@ -8124,7 +8123,7 @@ Nulos en factor_medio: 111,525
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8245,7 +8244,7 @@ base para calcular la métrica <strong>s/m</strong> en la fase de integración.<
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -8520,11 +8519,11 @@ y filtramos al periodo <strong>H2 2021 + 2022</strong>. AEMET supera a MeteoCat 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Cargar datos horarios de AEMET (3 estaciones, resolución horaria nativa)</span>
-<span class="n">aemet_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">'Meteorologia_AEMET'</span> <span class="o">/</span> <span class="s1">'AEMET_horario_2021_2024.parquet'</span><span class="p">)</span>
+<span class="n">aemet_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">'Meteorologia_AEMET'</span> <span class="o">/</span> <span class="s1">'AEMET_horario_2021_2022.parquet'</span><span class="p">)</span>
 <span class="n">aemet_raw</span><span class="p">[</span><span class="s1">'fecha'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">aemet_raw</span><span class="p">[</span><span class="s1">'fecha'</span><span class="p">])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Registros AEMET: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">aemet_raw</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
@@ -8544,15 +8543,15 @@ y filtramos al periodo <strong>H2 2021 + 2022</strong>. AEMET supera a MeteoCat 
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Registros AEMET: 96,400
+<pre>Registros AEMET: 47,666
 Estaciones: ['Barcelona_Aeropuerto', 'Barcelona_Drassanes', 'Barcelona_PortOlimpic']
-Rango: 2021-01-01 00:00:00 → 2024-12-31 23:00:00
+Rango: 2021-01-01 00:00:00 → 2022-12-31 23:00:00
 Variables: ['temp_c', 'humedad_pct', 'presion_hpa', 'precipitacion_mm', 'viento_vel_ms', 'viento_dir_grad', 'nubosidad_oktas', 'visibilidad_km']
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8597,8 +8596,8 @@ Variables: ['temp_c', 'humedad_pct', 'presion_hpa', 'precipitacion_mm', 'viento_
 <td>0.0000</td>
 <td>5.6000</td>
 <td>1.0000</td>
-<td>NaN</td>
-<td>NaN</td>
+<td>7.0000</td>
+<td>2000.0000</td>
 </tr>
 <tr>
 <th>1</th>
@@ -8607,12 +8606,12 @@ Variables: ['temp_c', 'humedad_pct', 'presion_hpa', 'precipitacion_mm', 'viento_
 <td>Barcelona_Aeropuerto</td>
 <td>3.9000</td>
 <td>69.0000</td>
-<td>NaN</td>
+<td>1014.7000</td>
 <td>0.0000</td>
 <td>4.7000</td>
 <td>1.0000</td>
-<td>NaN</td>
-<td>NaN</td>
+<td>7.0000</td>
+<td>2000.0000</td>
 </tr>
 <tr>
 <th>2</th>
@@ -8621,12 +8620,12 @@ Variables: ['temp_c', 'humedad_pct', 'presion_hpa', 'precipitacion_mm', 'viento_
 <td>Barcelona_Aeropuerto</td>
 <td>3.1000</td>
 <td>71.0000</td>
-<td>NaN</td>
+<td>1014.7000</td>
 <td>0.0000</td>
 <td>5.0000</td>
 <td>1.0000</td>
-<td>NaN</td>
-<td>NaN</td>
+<td>7.0000</td>
+<td>2000.0000</td>
 </tr>
 </tbody>
 </table>
@@ -8661,7 +8660,7 @@ forward-fill por estación antes del promedio para rellenar las horas intermedia
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Interpolación temporal de variables sinópticas antes del promedio de estaciones.</span>
@@ -8724,7 +8723,7 @@ forward-fill por estación antes del promedio para rellenar las horas intermedia
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Horas con datos meteo: 13,176
 Nulos (%) tras interpolación sinóptica:
-  presion_hpa              : 1.65 %
+  presion_hpa              : 1.38 %
   nubosidad_oktas          : 0.03 %
   visibilidad_km           : 1.27 %
   temp_media_c             : 0.00 %
@@ -8734,7 +8733,7 @@ Nulos (%) tras interpolación sinóptica:
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8837,7 +8836,7 @@ tenían cobertura horaria completa (&lt; 0,1 % nulos).</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># AEMET ya tiene resolución horaria nativa: no se necesita expansión diaria → horaria.</span>
@@ -8863,7 +8862,7 @@ Rango: 2021-07-01 00:00:00 → 2022-12-31 23:00:00
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8982,7 +8981,7 @@ con el periodo de estudio.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># --- 3.1 Festivales y Fiestas ---</span>
@@ -9027,12 +9026,12 @@ con el periodo de estudio.</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Festivales/Fiestas cargados: 122
+<pre>Festivales/Fiestas cargados: 62
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9109,7 +9108,7 @@ con el periodo de estudio.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
-<p><code>festivales</code> — tabla unificada de <strong>122 festivales y fiestas</strong> de ciudad con columnas
+<p><code>festivales</code> — tabla unificada de <strong>62 festivales y fiestas</strong> de ciudad con columnas
 <code>Festa</code>, <code>DataInici</code>, <code>DataFi</code> y <code>Assistents</code> (limpiada a numérico). Las filas sin fecha
 de inicio válida se han descartado. Los registros sin fecha fin heredan la fecha de inicio
 (evento de un solo día).</p>
@@ -9122,7 +9121,7 @@ de inicio válida se han descartado. Los registros sin fecha fin heredan la fech
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># --- 3.2 Agenda Cultural ---</span>
@@ -9179,7 +9178,7 @@ Rango fechas agenda: 0026-07-01 03:15:00 → 2027-06-30 01:00:00
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9276,7 +9275,7 @@ lo que hace esta fuente marginal para el modelo frente a FCB, conciertos y feria
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># --- 3.4 Construir serie horaria de eventos ---</span>
@@ -9356,7 +9355,7 @@ Días con eventos de agenda: 17
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9432,7 +9431,7 @@ La columna <code>fecha</code> permite unir con eventos de granularidad diaria an
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Festivales activos por día</span>
@@ -9494,7 +9493,7 @@ La columna <code>fecha</code> permite unir con eventos de granularidad diaria an
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Conciertos en periodo:   </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">conciertos</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 
 <span class="c1"># --- 3.7 Ferias ---</span>
-<span class="n">ferias</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">'Ferias'</span> <span class="o">/</span> <span class="s1">'ferias_barcelona_2021_2024.csv'</span><span class="p">)</span>
+<span class="n">ferias</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">'Ferias'</span> <span class="o">/</span> <span class="s1">'ferias_barcelona_2021_2022.csv'</span><span class="p">)</span>
 <span class="n">ferias</span><span class="p">[</span><span class="s1">'start_date'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ferias</span><span class="p">[</span><span class="s1">'data_inici'</span><span class="p">])</span>
 <span class="n">ferias</span><span class="p">[</span><span class="s1">'end_date'</span><span class="p">]</span>   <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ferias</span><span class="p">[</span><span class="s1">'data_fi'</span><span class="p">])</span>
 <span class="n">ferias_periodo</span> <span class="o">=</span> <span class="n">ferias</span><span class="p">[</span>
@@ -9575,7 +9574,7 @@ Fechas únicas con evento (cualquier fuente): 181
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Unir todos los rasgos de eventos al índice horario</span>
@@ -9629,7 +9628,7 @@ Horas con hay_evento=1: 4,272 (32.4%)
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9743,7 +9742,7 @@ evento × 24 horas ÷ 13 176 horas totales ≈ 33 %.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ACC_GLOB</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">'Accidentes'</span> <span class="o">/</span> <span class="s1">'20[0-9][0-9]_accidents_*.csv'</span><span class="p">)</span>
@@ -9770,14 +9769,14 @@ evento × 24 horas ÷ 13 176 horas totales ≈ 33 %.</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Archivos accidentes: 4
-Registros accidentes: 31,254
-Columnas disponibles: ['Numero_expedient', 'Codi_districte', 'Nom_districte', 'Codi_barri', 'Nom_barri', 'Codi_carrer', 'Nom_carrer', 'Num_postal_caption', 'Descripcio_dia_setmana', 'NK_Any', 'Mes_any', 'Nom_mes', 'Dia_mes', 'Hora_dia', 'Descripcio_torn', 'Descripcio_tipus_accident', 'Coordenada_UTM_X_ED50', 'Coordenada_UTM_Y_ED50', 'Longitud_WGS84', 'Latitud_WGS84', 'Longitud', 'Latitud', 'Num_postal']
+<pre>Archivos accidentes: 2
+Registros accidentes: 15,894
+Columnas disponibles: ['Numero_expedient', 'Codi_districte', 'Nom_districte', 'Codi_barri', 'Nom_barri', 'Codi_carrer', 'Nom_carrer', 'Num_postal_caption', 'Descripcio_dia_setmana', 'NK_Any', 'Mes_any', 'Nom_mes', 'Dia_mes', 'Hora_dia', 'Descripcio_torn', 'Descripcio_tipus_accident', 'Coordenada_UTM_X_ED50', 'Coordenada_UTM_Y_ED50', 'Longitud_WGS84', 'Latitud_WGS84', 'Longitud', 'Latitud']
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9819,7 +9818,6 @@ Columnas disponibles: ['Numero_expedient', 'Codi_districte', 'Nom_districte', 'C
 <th>Latitud_WGS84</th>
 <th>Longitud</th>
 <th>Latitud</th>
-<th>Num_postal</th>
 </tr>
 </thead>
 <tbody>
@@ -9830,7 +9828,7 @@ Columnas disponibles: ['Numero_expedient', 'Codi_districte', 'Nom_districte', 'C
 <td>Desconegut</td>
 <td>-1</td>
 <td>Desconegut</td>
-<td>-1.0000</td>
+<td>-1</td>
 <td>Glòries Catalanes                             ...</td>
 <td>Desconegut</td>
 <td>Dimecres</td>
@@ -9847,7 +9845,6 @@ Columnas disponibles: ['Numero_expedient', 'Codi_districte', 'Nom_districte', 'C
 <td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
-<td>NaN</td>
 </tr>
 <tr>
 <th>1</th>
@@ -9856,7 +9853,7 @@ Columnas disponibles: ['Numero_expedient', 'Codi_districte', 'Nom_districte', 'C
 <td>Desconegut</td>
 <td>-1</td>
 <td>Desconegut</td>
-<td>-1.0000</td>
+<td>-1</td>
 <td>Arístides Maillol                             ...</td>
 <td>Desconegut</td>
 <td>Dijous</td>
@@ -9873,7 +9870,6 @@ Columnas disponibles: ['Numero_expedient', 'Codi_districte', 'Nom_districte', 'C
 <td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
-<td>NaN</td>
 </tr>
 <tr>
 <th>2</th>
@@ -9882,7 +9878,7 @@ Columnas disponibles: ['Numero_expedient', 'Codi_districte', 'Nom_districte', 'C
 <td>Sant Martí</td>
 <td>64</td>
 <td>el Camp de l'Arpa del Clot</td>
-<td>209900.0000</td>
+<td>209900</td>
 <td>Meridiana</td>
 <td>0179 0179</td>
 <td>Dilluns</td>
@@ -9897,7 +9893,6 @@ Columnas disponibles: ['Numero_expedient', 'Codi_districte', 'Nom_districte', 'C
 <td>4585138.7800</td>
 <td>2.1866</td>
 <td>41.4131</td>
-<td>NaN</td>
 <td>NaN</td>
 <td>NaN</td>
 </tr>
@@ -9928,7 +9923,7 @@ y atributos del siniestro (tipo, distrito, barrio, coordenadas UTM y WGS84).</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Reconstruir datetime</span>
@@ -9977,7 +9972,7 @@ Total accidentes: 12,193
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -10067,7 +10062,7 @@ estacionales y de comportamiento diario/semanal.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">agregar_rasgos_temporales</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">col_hora</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">'hora'</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
@@ -10124,7 +10119,7 @@ estacionales y de comportamiento diario/semanal.</p>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -10269,7 +10264,7 @@ modelo aprender continuidad temporal (p. ej. 23h ≈ 0h, diciembre ≈ enero)</l
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># --- 6.1 Cargar información estática de trams ---</span>
@@ -10298,7 +10293,7 @@ modelo aprender continuidad temporal (p. ej. 23h ≈ 0h, diciembre ≈ enero)</l
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -10369,7 +10364,7 @@ todos los tramos del grafo viario de Barcelona. Las coordenadas están en format
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Extraer coordenadas del campo Coordenades (lon,lat pares separados por coma)</span>
@@ -10467,7 +10462,7 @@ Name: longitud_tramo_m, dtype: float64
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -10570,7 +10565,7 @@ interiores tienen menos de 50 m, lo que justifica normalizar con s/m).</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># --- 6.2 Relacion tram -&gt; itinerario ---</span>
@@ -10622,7 +10617,7 @@ dtype: float64
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -10701,7 +10696,7 @@ monitorizados con asignación.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Incorporar idItinerari a la tabla de geodatos de trams</span>
@@ -10729,7 +10724,7 @@ Trams con itinerario asignado: 208
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -10860,7 +10855,7 @@ De los 58 tramos monitorizados en <code>trafico_horario</code>, aproximadamente 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># --- 6.3 Ensamblaje final ---</span>
@@ -10964,7 +10959,7 @@ en ningún paso (741 182 en todas las etapas), confirmando que no hay productos 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Resumen de nulos por columna</span>
@@ -10996,7 +10991,7 @@ factor_min        111525 15.0500
 factor_max        111525 15.0500
 tendencia_media   111525 15.0500
 sm                111469 15.0400
-presion_hpa        12586  1.7000
+presion_hpa        10556  1.4200
 visibilidad_km      9686  1.3100
 precipitacion_mm     232  0.0300
 nubosidad_oktas      232  0.0300
@@ -11064,7 +11059,7 @@ asignado para análisis por itinerario) y el 15 % de horas sin medición de trá
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Estadísticas descriptivas de las variables objetivo</span>
@@ -11100,31 +11095,39 @@ asignado para análisis por itinerario) y el 15 % de horas sin medición de trá
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>=== Variable objetivo continua: sm (s/m) ===
 Registros sm válidos: 629,713 (85.0%)
-count    629713.0000
-unique    33508.0000
-top           0.2625
-freq      11492.0000
+count   629713.0000
+mean         0.4100
+std          0.2974
+min          0.0093
+25%          0.2424
+50%          0.3023
+75%          0.4637
+max          2.8284
 Name: sm, dtype: float64
 
 Mediana global: 0.3023 s/m  (≈ 11.9 km/h)
 
 === Variable objetivo alternativa: factor_medio ===
-count    629657.0000
-unique       92.0000
-top           1.0000
-freq     600684.0000
+count   629657.0000
+mean         0.9975
+std          0.1268
+min          0.0000
+25%          1.0000
+50%          1.0000
+75%          1.0000
+max          2.0000
 Name: factor_medio, dtype: float64
 
 Dist. factor_medio:
-(-0.003, 0.2]     0.82%
-(0.2, 0.4]        0.48%
-(0.4, 0.6]        0.66%
-(0.6, 0.8]        0.74%
-(0.8, 1.0]       80.57%
+(-0.003, 0.2]     0.53%
+(0.2, 0.4]        0.21%
+(0.4, 0.6]        0.41%
+(0.6, 0.8]        0.49%
+(0.8, 1.0]       81.64%
 (1.0, 1.2]        0.43%
 (1.2, 1.4]        0.31%
 (1.4, 1.6]        0.31%
-(1.6, 1.8]        0.16%
+(1.6, 1.8]        0.17%
 (1.8, 2.0]        0.46%
 Name: proportion, dtype: str
 
@@ -11163,7 +11166,7 @@ dataset final. Requieren conversión explícita (<code>pd.to_numeric</code>) ant
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Cobertura temporal (H2 2021 + 2022)</span>
@@ -11252,7 +11255,7 @@ con algunos sensores aún en proceso de reactivación. El número de tramos es c
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Verificar distribución de eventos</span>
@@ -11290,10 +11293,10 @@ Horas con festival activo:                  1,484
 Horas con ≥1 evento agenda:                 376
 
 === sm y factor_medio en días con/sin evento (hay_evento) ===
-           sm_media factor_med  n_filas
-hay_evento                             
-0            0.4102     0.9977   499148
-1            0.4094     0.9972   242034
+            sm_media  factor_med  n_filas
+hay_evento                               
+0             0.4102      0.9977   499148
+1             0.4094      0.9972   242034
 </pre>
 </div>
 </div>
@@ -11327,7 +11330,7 @@ El impacto causal de FCB solo es detectable en la franja 20–21 h.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Verificar coherencia de tipos de datos</span>
@@ -11348,9 +11351,8 @@ El impacto causal de FCB solo es detectable en la franja 20–21 h.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>=== Tipos de datos ===
-float64           24
+float64           31
 int64             15
-object             7
 int32              5
 str                2
 datetime64[us]     1
@@ -11360,13 +11362,13 @@ Name: count, dtype: int64
 Detalle:
 idTram                                int64
 hora                         datetime64[us]
-factor_medio                         object
-factor_max                           object
-factor_min                           object
+factor_medio                        float64
+factor_max                          float64
+factor_min                          float64
 factor_std                          float64
-tiempo_actual                        object
-tiempo_previsto                      object
-tendencia_media                      object
+tiempo_actual                       float64
+tiempo_previsto                     float64
+tendencia_media                     float64
 n_mediciones                          int64
 sensor_trafico_ok                     int64
 anyo                                  int32
@@ -11412,7 +11414,7 @@ lon_ini                             float64
 lat_fi                              float64
 lon_fi                              float64
 idItinerari                         float64
-sm                                   object
+sm                                  float64
 </pre>
 </div>
 </div>
@@ -11453,7 +11455,7 @@ antes del entrenamiento. <code>hora</code> es <code>datetime64[us]</code>; <code
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Ordenar por tram y hora antes de guardar</span>
@@ -11511,7 +11513,7 @@ Periodo: 2021-07-01 → 2022-12-31. Columnas clave: <code>sm</code>, <code>hay_e
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Verificación de lectura</span>
@@ -11541,7 +11543,7 @@ Periodo: 2021-07-01 → 2022-12-31. Columnas clave: <code>sm</code>, <code>hay_e
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -11913,7 +11915,7 @@ incluyendo <code>datetime64[us]</code> y <code>category</code>.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">descripciones</span> <span class="o">=</span> <span class="p">{</span>
@@ -11982,7 +11984,7 @@ Columnas totales: 55
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -12029,7 +12031,7 @@ Columnas totales: 55
 <tr>
 <th>2</th>
 <td>factor_medio</td>
-<td>object</td>
+<td>float64</td>
 <td>15.0500</td>
 <td>1.0</td>
 <td>Factor tráfico medio (variable objetivo altern...</td>
@@ -12037,7 +12039,7 @@ Columnas totales: 55
 <tr>
 <th>3</th>
 <td>factor_max</td>
-<td>object</td>
+<td>float64</td>
 <td>15.0500</td>
 <td>1.0</td>
 <td>Factor tráfico máximo en la hora</td>
@@ -12045,7 +12047,7 @@ Columnas totales: 55
 <tr>
 <th>4</th>
 <td>factor_min</td>
-<td>object</td>
+<td>float64</td>
 <td>15.0500</td>
 <td>1.0</td>
 <td>Factor tráfico mínimo en la hora</td>
@@ -12061,7 +12063,7 @@ Columnas totales: 55
 <tr>
 <th>6</th>
 <td>tiempo_actual</td>
-<td>object</td>
+<td>float64</td>
 <td>0.0000</td>
 <td>300.4166666666667</td>
 <td>Tiempo de viaje actual medio (s)</td>
@@ -12069,7 +12071,7 @@ Columnas totales: 55
 <tr>
 <th>7</th>
 <td>tiempo_previsto</td>
-<td>object</td>
+<td>float64</td>
 <td>0.0000</td>
 <td>300.3333333333333</td>
 <td>Tiempo de viaje previsto medio (s)</td>
@@ -12077,7 +12079,7 @@ Columnas totales: 55
 <tr>
 <th>8</th>
 <td>tendencia_media</td>
-<td>object</td>
+<td>float64</td>
 <td>15.0500</td>
 <td>1.0</td>
 <td>Tendencia media de congestión (-1/0/1)</td>
@@ -12230,7 +12232,7 @@ Columnas totales: 55
 <th>27</th>
 <td>presion_hpa</td>
 <td>float64</td>
-<td>1.7000</td>
+<td>1.4200</td>
 <td>1017.5</td>
 <td>Presión atmosférica media (hPa)</td>
 </tr>
@@ -12445,7 +12447,7 @@ Columnas totales: 55
 <tr>
 <th>54</th>
 <td>sm</td>
-<td>object</td>
+<td>float64</td>
 <td>15.0400</td>
 <td>0.3252308234915407</td>
 <td>s/m = tiempo_actual / longitud_tramo_m — inver...</td>
